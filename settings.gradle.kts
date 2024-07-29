@@ -21,3 +21,11 @@ dependencyResolutionManagement {
 
 rootProject.name = "wChat"
 include(":app")
+include(":core:network")
+include(":core:database")
+include(":domain")
+include(":data")
+include(":feature:common")
+include(":feature:chats")
+include(":feature:calls")
+include(":feature:status")
