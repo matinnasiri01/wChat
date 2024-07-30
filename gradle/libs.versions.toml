@@ -12,6 +12,10 @@ ksp = "1.9.21-1.0.15"
 # Hilt
 hilt = "2.49"
 hiltN = "1.2.0"
+# Network
+retrofit = "2.11.0"
+moshi = "2.9.0"
+interceptor = "4.12.0"
 # Gson
 gson = "2.10.1"
 # Coil
@@ -39,7 +43,11 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 # Hilt
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltN" }# Gson
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltN" }
+# Network
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "moshi" }
+logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "interceptor" }
 # Gson
 gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 # Coil
