@@ -4,12 +4,15 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dagger.hilt.android.AndroidEntryPoint
+import io.nasiri.chats.ChatsScreen
 import io.nasiri.common.head.Head
 import io.nasiri.wchat.ui.theme.WChatTheme
 
@@ -25,7 +28,10 @@ class MainActivity : ComponentActivity() {
                         .fillMaxSize()
                         .padding(horizontal = 10.dp)
                 ) { innerPadding ->
-                    Head(modifier = Modifier.padding(innerPadding))
+                    Column(modifier = Modifier.padding(innerPadding)) {
+                        Head()
+                        ChatsScreen()
+                    }
                 }
             }
         }
