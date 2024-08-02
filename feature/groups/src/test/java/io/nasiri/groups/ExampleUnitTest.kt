@@ -1,4 +1,4 @@
-package io.nasiri.status
+package io.nasiri.groups
 
 import org.junit.Test
 

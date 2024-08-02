@@ -74,6 +74,6 @@ dependencies {
     implementation(project(":feature:common"))
     implementation(project(":feature:chats"))
     implementation(project(":feature:calls"))
-    implementation(project(":feature:status"))
+    implementation(project(":feature:groups"))
 
 }

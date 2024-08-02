@@ -8,5 +8,6 @@
     <string name="archive_chats">Archive Chats</string>
     <string name="add_story">Add Story</string>
     <string name="stories">Stories</string>
+    <string name="my_groups">My Groups</string>
     <string name="recent_chats">Recent Chats</string>
 </resources>
