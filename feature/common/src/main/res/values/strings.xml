@@ -4,6 +4,9 @@
     <string name="cd_search">search button</string>
     <string name="cd_profile">profile button</string>
     <string name="cd_story">user id</string>
+    <string name="cd_archive">archive icon</string>
+    <string name="archive_chats">Archive Chats</string>
     <string name="add_story">Add Story</string>
     <string name="stories">Stories</string>
+    <string name="recent_chats">Recent Chats</string>
 </resources>
