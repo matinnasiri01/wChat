@@ -1,4 +1,4 @@
-package io.nasiri.groups.groups
+package io.nasiri.calls.calls
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -13,20 +13,20 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import io.nasiri.common.R
-import io.nasiri.common.items.MainItem
+import io.nasiri.common.items.CallItem
 
 @Composable
-fun MyGroups(modifier: Modifier = Modifier) {
+fun RecentCalls(modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxWidth()) {
         Text(
-            text = stringResource(id = R.string.my_groups),
+            text = stringResource(id = R.string.recent_calls),
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.height(16.dp))
         LazyColumn {
             items(20) {
-                MainItem()
+                CallItem()
             }
         }
     }

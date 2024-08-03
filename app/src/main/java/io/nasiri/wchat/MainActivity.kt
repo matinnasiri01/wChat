@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dagger.hilt.android.AndroidEntryPoint
 import io.nasiri.common.head.Head
-import io.nasiri.groups.GroupsScreen
+import io.nasiri.calls.CallsScreen
 import io.nasiri.wchat.ui.theme.WChatTheme
 
 @AndroidEntryPoint
@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                 ) { innerPadding ->
                     Column(modifier = Modifier.padding(innerPadding)) {
                         Head()
-                        GroupsScreen()
+                        CallsScreen()
                     }
                 }
             }

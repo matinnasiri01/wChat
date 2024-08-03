@@ -22,7 +22,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import io.nasiri.common.R
-import io.nasiri.common.item.MainItem
+import io.nasiri.common.items.MainItem
 
 @Composable
 fun RecentChats(modifier: Modifier = Modifier) {

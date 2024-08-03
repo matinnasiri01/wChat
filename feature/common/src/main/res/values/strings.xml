@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">wChat</string>
+
+    <string name="stories">Stories</string>
+    <string name="add_story">Add Story</string>
+    <string name="recent_chats">Recent Chats</string>
+    <string name="archive_chats">Archive Chats</string>
+    <string name="my_groups">My Groups</string>
+    <string name="recent_calls">Recent Calls</string>
+
+    <!--  contentDescription  -->
     <string name="cd_search">search button</string>
     <string name="cd_profile">profile button</string>
     <string name="cd_story">user id</string>
     <string name="cd_archive">archive icon</string>
-    <string name="archive_chats">Archive Chats</string>
-    <string name="add_story">Add Story</string>
-    <string name="stories">Stories</string>
-    <string name="my_groups">My Groups</string>
-    <string name="recent_chats">Recent Chats</string>
+
 </resources>

@@ -1,4 +1,4 @@
-package io.nasiri.common.item
+package io.nasiri.common.items
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
