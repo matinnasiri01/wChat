@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.dp
 import dagger.hilt.android.AndroidEntryPoint
 import io.nasiri.common.head.Head
 import io.nasiri.chats.ChatsScreen
+import io.nasiri.common.FABMain
 import io.nasiri.common.navigation.BottomNavigation
 import io.nasiri.wchat.ui.theme.WChatTheme
 
@@ -25,6 +26,7 @@ class MainActivity : ComponentActivity() {
             WChatTheme {
                 Scaffold(
                     bottomBar = { BottomNavigation() },
+                    floatingActionButton = { FABMain() },
                     modifier = Modifier.fillMaxSize()
                 ) { innerPadding ->
                     Column(
