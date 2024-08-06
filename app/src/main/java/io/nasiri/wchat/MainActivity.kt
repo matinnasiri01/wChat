@@ -12,7 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dagger.hilt.android.AndroidEntryPoint
 import io.nasiri.common.head.Head
-import io.nasiri.calls.CallsScreen
+import io.nasiri.chats.ChatsScreen
+import io.nasiri.common.navigation.BottomNavigation
 import io.nasiri.wchat.ui.theme.WChatTheme
 
 @AndroidEntryPoint
@@ -23,13 +24,16 @@ class MainActivity : ComponentActivity() {
         setContent {
             WChatTheme {
                 Scaffold(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(horizontal = 10.dp)
+                    bottomBar = { BottomNavigation() },
+                    modifier = Modifier.fillMaxSize()
                 ) { innerPadding ->
-                    Column(modifier = Modifier.padding(innerPadding)) {
+                    Column(
+                        modifier = Modifier
+                            .padding(innerPadding)
+                            .padding(horizontal = 10.dp)
+                    ) {
                         Head()
-                        CallsScreen()
+                        ChatsScreen()
                     }
                 }
             }

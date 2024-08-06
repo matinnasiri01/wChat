@@ -18,10 +18,12 @@ import androidx.compose.ui.unit.dp
 import io.nasiri.common.R
 
 @Composable
-fun Head(modifier: Modifier = Modifier) {
-    /* todo Event flow must be observed */
+fun Head(
+    modifier: Modifier = Modifier,
+) {
     Row(
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier
+            .fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
