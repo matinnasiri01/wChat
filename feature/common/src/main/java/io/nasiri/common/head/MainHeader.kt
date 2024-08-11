@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import io.nasiri.common.R
 
@@ -17,7 +18,7 @@ import io.nasiri.common.R
 @Composable
 fun MainHeader() {
     TopAppBar(
-        title = { Text(text = stringResource(id = R.string.app_name)) },
+        title = { Text(text = stringResource(id = R.string.app_name),fontWeight = FontWeight.Bold) },
         actions = {
             IconButton(onClick = { }) {
                 Icon(
