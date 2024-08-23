@@ -2,6 +2,11 @@
 <resources>
     <string name="app_name">wChat</string>
 
+    <!-- nav-->
+    <string name="chat">Chat</string>
+    <string name="groups">Groups</string>
+    <string name="calls">Calls</string>
+
     <string name="stories">Stories</string>
     <string name="add_story">Add Story</string>
     <string name="recent_chats">Recent Chats</string>

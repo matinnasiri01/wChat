@@ -14,7 +14,7 @@ import io.nasiri.common.R
 @Composable
 fun FABMain(onClick: () -> Unit = { }) {
     FloatingActionButton(
-        modifier = Modifier.padding(end = 8.dp, bottom = 36.dp),
+        modifier = Modifier.padding(end = 10.dp, bottom = 36.dp),
         shape = CircleShape,
         onClick = onClick
     ) {
