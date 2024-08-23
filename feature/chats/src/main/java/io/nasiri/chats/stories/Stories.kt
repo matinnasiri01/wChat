@@ -26,9 +26,7 @@ fun Stories(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(16.dp))
         LazyRow(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             item { ItemS(isAddButton = true) }
-            items(20) {
-                ItemS()
-            }
+            items(20) { ItemS() }
         }
     }
 
