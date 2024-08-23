@@ -10,6 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.buildAnnotatedString
@@ -34,6 +36,7 @@ fun MainItem(modifier: Modifier = Modifier) {
                 AsyncImage(
                     modifier = Modifier
                         .size(62.dp)
+                        .statusColor()
                         .clip(CircleShape),
                     model = "https://cdn.nody.ir/files/2021/09/05/nody-%D8%B9%DA%A9%D8%B3-%D8%B3%D8%A7%D8%AF%D9%87-%D8%A7%D9%85%D8%A7-%D8%B2%DB%8C%D8%A8%D8%A7-1630849462.jpg",
                     contentScale = ContentScale.Crop,
@@ -62,3 +65,15 @@ fun MainItem(modifier: Modifier = Modifier) {
         )
     }
 }
+
+fun Modifier.statusColor(
+    position: Offset? = null,
+    color: Color = Color.Green,
+    background: Color = Color.White
+): Modifier =
+    this.drawWithContent {
+        drawContent()
+        val center = position ?: Offset(size.width - 25, size.height - 25)
+        drawCircle(color = background, 20f, center = center)
+        drawCircle(color = color, 12f, center = center)
+    }

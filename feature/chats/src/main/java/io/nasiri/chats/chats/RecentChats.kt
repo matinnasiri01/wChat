@@ -56,9 +56,9 @@ fun RecentChats(modifier: Modifier = Modifier) {
                 )
             }
         }
-        Spacer(modifier = Modifier.height(16.dp))
-        LazyColumn {
-            items(20) {
+        Spacer(modifier = Modifier.height(12.dp))
+        Column {
+            repeat(20) {
                 MainItem()
             }
         }

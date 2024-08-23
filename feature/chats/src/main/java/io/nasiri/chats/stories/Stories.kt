@@ -23,7 +23,7 @@ fun Stories(modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold
         )
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(12.dp))
         LazyRow(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
             item { ItemS(isAddButton = true) }
             items(20) { ItemS() }
