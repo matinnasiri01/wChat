@@ -12,10 +12,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dagger.hilt.android.AndroidEntryPoint
-import io.nasiri.chats.ChatsScreen
 import io.nasiri.common.fab.FABMain
 import io.nasiri.common.head.MainHeader
 import io.nasiri.common.navigation.BottomNavigation
+import io.nasiri.groups.GroupsScreen
 import io.nasiri.wchat.ui.theme.WChatTheme
 
 @AndroidEntryPoint
@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
                             .padding(innerPadding)
                             .padding(horizontal = 10.dp)
                     ) {
-                       ChatsScreen()
+                        GroupsScreen()
                     }
                 }
             }

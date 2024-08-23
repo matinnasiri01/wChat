@@ -32,7 +32,7 @@ fun ItemS(
     isAddButton: Boolean = false,
     rotationDurationMillis: Int = 1000,
     rotationIncrement: Float = 50f,
-    rotationMax: Float = 250f
+    rotationMax: Float = 360f
 ) {
     var targetValue by remember { mutableFloatStateOf(0f) }
 
