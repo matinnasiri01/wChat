@@ -24,12 +24,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import io.nasiri.common.profile.Profile
 
+val lightStyle = TextStyle(color = Color.Gray, fontSize = 14.sp)
 
 @Composable
 fun CCI(modifier: Modifier = Modifier) {
 
-    val lightStyle = TextStyle(color = Color.Gray, fontSize = 14.sp)
     val profileIcon = Icons.Default.Person
     val profileColor = Color(0x64D1B38C)
     val name = "Matin Nasiri"
@@ -49,18 +50,8 @@ fun CCI(modifier: Modifier = Modifier) {
                 )
             }, verticalAlignment = Alignment.CenterVertically
     ) {
-        Box(
-            modifier = Modifier
-                .size(52.dp)
-                .background(profileColor, CircleShape),
-            contentAlignment = Alignment.Center
-        ) {
-            Icon(
-                modifier = Modifier.size(26.dp),
-                imageVector = profileIcon,
-                contentDescription = "$name profile"
-            )
-        }
+
+        Profile()
 
         Box(
             modifier = Modifier
