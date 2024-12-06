@@ -72,5 +72,6 @@ dependencies {
     ksp(libs.hilt.android.compiler)
 
     implementation(project(":feature:common"))
+    implementation(project(":feature:chat"))
 
 }
