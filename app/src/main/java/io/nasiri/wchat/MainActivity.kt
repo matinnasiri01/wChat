@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import dagger.hilt.android.AndroidEntryPoint
-import io.nasiri.chat.ChatScreen
+import io.nasiri.chat.ChatBox
 import io.nasiri.wchat.ui.theme.WChatTheme
 
 @AndroidEntryPoint
@@ -14,7 +14,7 @@ class MainActivity : ComponentActivity() {
         //enableEdgeToEdge()
         setContent {
             WChatTheme {
-                ChatScreen()
+                ChatBox()
             }
         }
     }
