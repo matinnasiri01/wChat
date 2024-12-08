@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import dagger.hilt.android.AndroidEntryPoint
 import io.nasiri.chat.ChatBox
 import io.nasiri.common.prsetting.PSS
+import io.nasiri.story.show.SSS
 import io.nasiri.wchat.ui.theme.WChatTheme
 
 @AndroidEntryPoint
@@ -15,7 +16,7 @@ class MainActivity : ComponentActivity() {
         //enableEdgeToEdge()
         setContent {
             WChatTheme {
-                PSS()
+                SSS()
             }
         }
     }
