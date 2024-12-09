@@ -59,12 +59,18 @@ fun Modifier.drawRing(ringStroke: Float = 6f): Modifier = drawWithContent {
     }
 }
 
-fun calculatePairs(n: Int, space: Float = 10f): List<Pair<Float, Float>> {
+
+fun calculatePairs(n: Int, space: Int = 10): List<Pair<Float, Float>> {
     val cln = n.coerceIn(1, 10)
     if (cln == 1) return listOf(Pair(0f, 360f))
-    val lengthEach = (360 - cln * space) / cln
+    val lengthEach = calculateLengthSize(360, cln, space).toFloat()
     return List(cln) { i ->
         val start = 90f + i * (lengthEach + space)
         Pair(start, lengthEach)
     }
+}
+
+fun calculateLengthSize(max: Int, count: Int, spase: Int): Int {
+    val c = count.coerceIn(1, 10)
+    return (max - c * spase) / c
 }
