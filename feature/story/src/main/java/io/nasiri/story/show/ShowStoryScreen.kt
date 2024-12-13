@@ -9,6 +9,6 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun SSS(modifier: Modifier = Modifier) {
     Row (modifier.padding(10.dp)){
-        StoryIdCard()
+        ChatBox()
     }
 }
