@@ -4,9 +4,13 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -14,16 +18,32 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import io.nasiri.common.constants.Constants.BackGroundShape
+import io.nasiri.common.head.ChatHeader
 import io.nasiri.common.items.lightStyle
 
 @Composable
 fun ChatScreen(modifier: Modifier = Modifier) {
+    Scaffold(
+        modifier = modifier,
+        topBar = { ChatHeader() },
+        bottomBar = { ChatBox() }
+    ) { inn ->
 
-    Column(modifier = modifier.fillMaxWidth()) {
-        TextTime()
-        ChatItem(text = "Hi Alex!", isMe = true)
-        ChatItem(text = "Hi Matin")
-        ChatItem(text = "what's up?")
+        Column(
+            modifier = modifier
+                .fillMaxWidth()
+                .padding(inn)
+                .clip(BackGroundShape)
+                .background(Color.Blue.copy(.4f))
+        ) {
+            Spacer(modifier = Modifier.height(10.dp))
+            TextTime()
+            ChatItem(text = "Hi Alex!", isMe = true)
+            ChatItem(text = "Hi Matin")
+            ChatItem(text = "what's up?")
+        }
+
     }
 
 }
