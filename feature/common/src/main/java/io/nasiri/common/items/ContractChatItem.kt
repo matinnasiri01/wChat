@@ -42,7 +42,7 @@ fun CCI(modifier: Modifier = Modifier) {
         modifier = modifier
             .fillMaxWidth()
             .height(72.dp)
-            .padding(horizontal = 10.dp)
+            .padding(horizontal = 4.dp)
             .drawWithContent {
                 drawContent()
                 drawLine(
