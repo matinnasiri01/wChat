@@ -1,0 +1,47 @@
+package io.nasiri.common.splash
+
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+
+@Composable
+fun SplashScreen(modifier: Modifier = Modifier) {
+    Scaffold {
+        Box(
+            modifier = modifier
+                .fillMaxSize()
+                .padding(it)
+        ) {
+            Text(
+                text = "WCHAT",
+                fontWeight = FontWeight.Bold,
+                fontSize = 36.sp,
+                modifier = Modifier.align(Alignment.Center)
+            )
+            CircularProgressIndicator(
+                color = Color.Black,
+                modifier = Modifier
+                    .padding(top = 200.dp)
+                    .align(Alignment.Center)
+            )
+            Text(
+                text = "Matin Nasiri",
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp,
+                modifier = Modifier
+                    .padding(bottom = 20.dp)
+                    .align(Alignment.BottomCenter)
+            )
+        }
+    }
+}
