@@ -105,6 +105,7 @@ fun BoxScope.ProfileButton(modifier: Modifier = Modifier, owner: Boolean = false
             )
             Spacer(modifier = Modifier.width(8.dp))
         }
+
         Text(
             color = Color.White,
             text = if (owner) "Logout" else "Continue chatting",
