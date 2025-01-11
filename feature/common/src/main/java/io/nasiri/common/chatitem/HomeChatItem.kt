@@ -20,9 +20,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import io.nasiri.common.theme.bold12
+import io.nasiri.common.theme.bold16
 
 @Composable
 fun ChatItem(modifier: Modifier = Modifier) {
@@ -43,15 +44,11 @@ fun ChatItem(modifier: Modifier = Modifier) {
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Column {
-                    Text(
-                        text = "Matin Nasiri",
-                        fontSize = 16.sp,
-                        fontWeight = FontWeight.Bold
-                    )
+                    Text(text = "Matin Nasiri", style = bold16)
                     Text(text = "Hello", fontSize = 12.sp)
                 }
             }
-            Text(text = "12:35", fontWeight = FontWeight.Bold, fontSize = 12.sp)
+            Text(text = "12:35", style = bold12)
         }
         Spacer(modifier = Modifier.height(6.dp))
         Box(

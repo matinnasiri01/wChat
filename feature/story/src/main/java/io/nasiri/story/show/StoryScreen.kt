@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.sp
 import io.nasiri.common.R
 import io.nasiri.common.button.Button
 import io.nasiri.common.chatbox.ChatBox
+import io.nasiri.common.theme.bold12
 
 @Composable
 fun StoryScreen(modifier: Modifier = Modifier) {
@@ -59,7 +60,7 @@ fun UserProfile(modifier: Modifier = Modifier) {
                 .border(1.dp, MaterialTheme.colorScheme.onPrimary, CircleShape)
         )
         Spacer(modifier = Modifier.width(6.dp))
-        Text(text = "Morina Ghose", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+        Text(text = "Morina Ghose", style = bold12)
         Spacer(modifier = Modifier.width(2.dp))
         Text(text = "1h", fontSize = 8.sp)
     }

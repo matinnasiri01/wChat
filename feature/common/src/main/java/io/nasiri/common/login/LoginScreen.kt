@@ -21,10 +21,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import io.nasiri.common.R
+import io.nasiri.common.theme.bold22
+import io.nasiri.common.theme.bold36
 
 @Composable
 fun LoginScreen(modifier: Modifier = Modifier) {
@@ -40,11 +40,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                     .padding(horizontal = 14.dp),
                 verticalArrangement = Arrangement.spacedBy(32.dp)
             ) {
-                Text(
-                    text = "Login",
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 36.sp,
-                )
+                Text(text = "Login", style = bold36)
                 Row(modifier = Modifier
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(16.dp))
@@ -61,9 +57,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Text(
-                        text = "Continue with Google",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 22.sp,
+                        text = "Continue with Google", style = bold22
                     )
                 }
             }

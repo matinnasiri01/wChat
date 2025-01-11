@@ -10,9 +10,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import io.nasiri.common.theme.bold14
+import io.nasiri.common.theme.bold36
 
 @Composable
 fun SplashScreen(modifier: Modifier = Modifier) {
@@ -24,10 +24,7 @@ fun SplashScreen(modifier: Modifier = Modifier) {
         ) {
             Text(
 
-                text = "WCHAT",
-                fontWeight = FontWeight.Bold,
-                fontSize = 36.sp,
-                modifier = Modifier.align(Alignment.Center)
+                text = "WCHAT", style = bold36, modifier = Modifier.align(Alignment.Center)
             )
             CircularProgressIndicator(
                 color = MaterialTheme.colorScheme.onPrimary,
@@ -37,8 +34,7 @@ fun SplashScreen(modifier: Modifier = Modifier) {
             )
             Text(
                 text = "Matin Nasiri",
-                fontWeight = FontWeight.Bold,
-                fontSize = 14.sp,
+                style = bold14,
                 modifier = Modifier
                     .padding(bottom = 20.dp)
                     .align(Alignment.BottomCenter)

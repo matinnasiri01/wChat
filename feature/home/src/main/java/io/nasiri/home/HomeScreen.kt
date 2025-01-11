@@ -32,6 +32,8 @@ import androidx.compose.ui.unit.sp
 import io.nasiri.common.R
 import io.nasiri.common.chatitem.ChatItem
 import io.nasiri.common.storyitem.StoryItem
+import io.nasiri.common.theme.bold24
+import io.nasiri.common.theme.bold32
 
 @Composable
 fun HomeScreen(modifier: Modifier = Modifier) {
@@ -60,7 +62,7 @@ fun Header(modifier: Modifier = Modifier) {
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = "WCHAT", fontSize = 32.sp, fontWeight = FontWeight.Bold)
+        Text(text = "WCHAT", style = bold32)
         Row {
             Box(
                 modifier = Modifier
@@ -89,7 +91,7 @@ fun Header(modifier: Modifier = Modifier) {
 fun Story(modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxWidth()) {
 
-        Text(text = "Story", fontSize = 24.sp, fontWeight = FontWeight.Bold)
+        Text(text = "Story", style = bold24)
 
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -112,7 +114,7 @@ fun Story(modifier: Modifier = Modifier) {
 @Composable
 fun Chat(modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxWidth()) {
-        Text(text = "Recent Chat", fontSize = 24.sp, fontWeight = FontWeight.Bold)
+        Text(text = "Recent Chat", style = bold24)
         Spacer(modifier = Modifier.height(16.dp))
         repeat(6) {
             ChatItem()

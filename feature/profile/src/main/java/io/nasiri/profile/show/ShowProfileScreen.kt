@@ -31,6 +31,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.nasiri.common.button.Button
 import io.nasiri.common.R
+import io.nasiri.common.theme.bold12
+import io.nasiri.common.theme.bold18
+import io.nasiri.common.theme.bold22
+import io.nasiri.common.theme.bold32
 
 @Composable
 fun ShowProfileScreen(modifier: Modifier = Modifier) {
@@ -46,15 +50,14 @@ fun ShowProfileScreen(modifier: Modifier = Modifier) {
             ) {
 
             }
-            if (owner)
-                Button(
-                    icon = R.drawable.ic_pen24,
-                    modifier = Modifier
-                        .align(Alignment.TopEnd)
-                        .padding(top = 14.dp, end = 14.dp)
-                ) {
+            if (owner) Button(
+                icon = R.drawable.ic_pen24,
+                modifier = Modifier
+                    .align(Alignment.TopEnd)
+                    .padding(top = 14.dp, end = 14.dp)
+            ) {
 
-                }
+            }
 
             Column(
                 modifier = Modifier.align(Alignment.Center),
@@ -66,7 +69,7 @@ fun ShowProfileScreen(modifier: Modifier = Modifier) {
                     contentDescription = null
                 )
                 Spacer(modifier = Modifier.height(40.dp))
-                Text(text = "Sara Rahmani", fontWeight = FontWeight.Bold, fontSize = 32.sp)
+                Text(text = "Sara Rahmani", style = bold32)
                 Spacer(modifier = Modifier.height(12.dp))
                 Text(text = "sararahmani@gmail.com", fontSize = 18.sp)
                 Spacer(modifier = Modifier.height(12.dp))
@@ -74,8 +77,7 @@ fun ShowProfileScreen(modifier: Modifier = Modifier) {
                     modifier = Modifier.clickable { },
                     text = "@sararahmani",
                     color = Color.Blue,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 18.sp
+                    style = bold18
                 )
             }
             ProfileButton(owner = owner)
@@ -110,8 +112,7 @@ fun BoxScope.ProfileButton(modifier: Modifier = Modifier, owner: Boolean = false
         Text(
             color = MaterialTheme.colorScheme.primary,
             text = if (owner) "Logout" else "Continue chatting",
-            fontWeight = FontWeight.Bold,
-            fontSize = 22.sp
+            style = bold22
         )
     }
 }

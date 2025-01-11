@@ -33,6 +33,7 @@ import io.nasiri.common.chatbox.ChatBox
 import io.nasiri.common.R
 import io.nasiri.common.chatitem.DayTag
 import io.nasiri.common.chatitem.ItemSender
+import io.nasiri.common.theme.bold12
 
 @Composable
 fun ChatScreen(modifier: Modifier = Modifier) {
@@ -88,9 +89,7 @@ fun ChatScreen(modifier: Modifier = Modifier) {
                     Spacer(modifier = Modifier.width(4.dp))
                     Text(
                         text = "Matin Nasiri",
-                        color = MaterialTheme.colorScheme.primary,
-                        fontSize = 12.sp,
-                        fontWeight = FontWeight.Bold
+                        color = MaterialTheme.colorScheme.primary, style = bold12
                     )
                     Spacer(modifier = Modifier.width(4.dp))
                     Text(
