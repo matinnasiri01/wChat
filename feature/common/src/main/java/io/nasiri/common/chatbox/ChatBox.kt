@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -20,6 +19,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.nasiri.common.R
+import io.nasiri.common.theme.rounded32
 
 @Composable
 fun ChatBox(modifier: Modifier = Modifier) {
@@ -27,7 +27,7 @@ fun ChatBox(modifier: Modifier = Modifier) {
         modifier = modifier
             .fillMaxWidth()
             .padding(horizontal = 14.dp)
-            .clip(RoundedCornerShape(32.dp))
+            .clip(rounded32)
             .background(MaterialTheme.colorScheme.onPrimary)
             .padding(4.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -43,7 +43,7 @@ fun ChatBox(modifier: Modifier = Modifier) {
         Box(
             modifier = Modifier
                 .size(56.dp)
-                .clip(RoundedCornerShape(32.dp))
+                .clip(rounded32)
                 .background(MaterialTheme.colorScheme.primary)
                 .clickable { }, contentAlignment = Alignment.Center
         ) {

@@ -34,6 +34,7 @@ import io.nasiri.common.R
 import io.nasiri.common.chatitem.DayTag
 import io.nasiri.common.chatitem.ItemSender
 import io.nasiri.common.theme.bold12
+import io.nasiri.common.theme.rounded16
 
 @Composable
 fun ChatScreen(modifier: Modifier = Modifier) {
@@ -71,7 +72,7 @@ fun ChatScreen(modifier: Modifier = Modifier) {
                         .padding(horizontal = 10.dp)
                         .weight(2f)
                         .height(60.dp)
-                        .clip(RoundedCornerShape(16.dp))
+                        .clip(rounded16)
                         .background(MaterialTheme.colorScheme.onPrimary)
                         .clickable { },
                     verticalAlignment = Alignment.CenterVertically

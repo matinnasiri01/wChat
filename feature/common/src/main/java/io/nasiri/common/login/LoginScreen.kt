@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import io.nasiri.common.R
 import io.nasiri.common.theme.bold22
 import io.nasiri.common.theme.bold36
+import io.nasiri.common.theme.rounded16
 
 @Composable
 fun LoginScreen(modifier: Modifier = Modifier) {
@@ -43,9 +44,9 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                 Text(text = "Login", style = bold36)
                 Row(modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(16.dp))
+                    .clip(rounded16)
                     .border(
-                        3.dp, MaterialTheme.colorScheme.onPrimary, RoundedCornerShape(16.dp)
+                        3.dp, MaterialTheme.colorScheme.onPrimary, rounded16
                     )
                     .clickable { /* todo Login Action! */ }
                     .padding(vertical = 22.dp, horizontal = 32.dp),

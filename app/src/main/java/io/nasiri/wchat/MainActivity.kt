@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import dagger.hilt.android.AndroidEntryPoint
-import io.nasiri.common.splash.SplashScreen
+import io.nasiri.chat.ChatScreen
 import io.nasiri.common.theme.WChatTheme
 
 @AndroidEntryPoint
@@ -15,7 +15,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             WChatTheme {
-                SplashScreen()
+                ChatScreen()
             }
         }
     }

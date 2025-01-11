@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -26,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.nasiri.common.button.Button
 import io.nasiri.common.R
+import io.nasiri.common.theme.rounded16
 
 @Composable
 fun AddStoryScreen(modifier: Modifier = Modifier) {
@@ -56,15 +56,12 @@ fun AddStoryScreen(modifier: Modifier = Modifier) {
 
 @Composable
 fun Options(
-    modifier: Modifier = Modifier,
-    @DrawableRes icon: Int,
-    title: String,
-    onClick: () -> Unit
+    modifier: Modifier = Modifier, @DrawableRes icon: Int, title: String, onClick: () -> Unit
 ) {
     Column(
         modifier = modifier
             .size(92.dp, 82.dp)
-            .clip(RoundedCornerShape(16.dp))
+            .clip(rounded16)
             .background(
                 MaterialTheme.colorScheme.onPrimary
             )

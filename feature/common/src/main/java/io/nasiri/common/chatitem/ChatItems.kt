@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import io.nasiri.common.theme.rounded32
 
 @Composable
 fun ColumnScope.ItemSender(modifier: Modifier = Modifier, test: Boolean = true) {
@@ -39,7 +40,7 @@ fun ColumnScope.DayTag(modifier: Modifier = Modifier) {
         color = MaterialTheme.colorScheme.primary,
         modifier = modifier
             .align(Alignment.CenterHorizontally)
-            .clip(RoundedCornerShape(32f))
+            .clip(rounded32)
             .background(MaterialTheme.colorScheme.onPrimary)
             .padding(14.dp, 10.dp)
     )

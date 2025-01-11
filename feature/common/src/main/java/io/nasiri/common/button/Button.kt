@@ -5,7 +5,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -14,13 +13,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import io.nasiri.common.theme.rounded16
 
 @Composable
 fun Button(modifier: Modifier = Modifier, @DrawableRes icon: Int, onClick: () -> Unit) {
     Box(
         modifier = modifier
             .size(62.dp)
-            .clip(RoundedCornerShape(16.dp))
+            .clip(rounded16)
             .background(MaterialTheme.colorScheme.onPrimary)
             .clickable { onClick() },
         contentAlignment = Alignment.Center

@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -25,6 +24,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import io.nasiri.common.button.Button
 import io.nasiri.common.R
+import io.nasiri.common.theme.rounded16
 
 @Composable
 fun EditProfileScreen(modifier: Modifier = Modifier) {
@@ -75,20 +75,20 @@ fun EditProfileScreen(modifier: Modifier = Modifier) {
                 Spacer(modifier = Modifier.height(40.dp))
                 OutlinedTextField(value = "Sara Rahmani",
                     onValueChange = {},
-                    shape = RoundedCornerShape(16.dp),
+                    shape = rounded16,
                     label = { Text(text = "Name") })
                 Spacer(modifier = Modifier.height(12.dp))
                 OutlinedTextField(
                     value = "sararahmani@gmail.com",
                     onValueChange = {},
-                    shape = RoundedCornerShape(16.dp),
+                    shape = rounded16,
                     label = { Text(text = "Email") },
                     enabled = false
                 )
                 Spacer(modifier = Modifier.height(12.dp))
                 OutlinedTextField(value = "@sararahmani",
                     onValueChange = {},
-                    shape = RoundedCornerShape(16.dp),
+                    shape = rounded16,
                     label = { Text(text = "ID") })
             }
         }

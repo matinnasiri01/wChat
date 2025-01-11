@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -26,15 +25,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.nasiri.common.button.Button
 import io.nasiri.common.R
-import io.nasiri.common.theme.bold12
 import io.nasiri.common.theme.bold18
 import io.nasiri.common.theme.bold22
 import io.nasiri.common.theme.bold32
+import io.nasiri.common.theme.rounded16
 
 @Composable
 fun ShowProfileScreen(modifier: Modifier = Modifier) {
@@ -94,7 +92,7 @@ fun BoxScope.ProfileButton(modifier: Modifier = Modifier, owner: Boolean = false
             .height(120.dp)
             .padding(horizontal = 40.dp)
             .padding(bottom = 40.dp)
-            .clip(RoundedCornerShape(16.dp))
+            .clip(rounded16)
             .background(MaterialTheme.colorScheme.onPrimary)
             .clickable { },
         horizontalArrangement = Arrangement.Center,

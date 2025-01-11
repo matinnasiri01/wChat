@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.nasiri.common.theme.bold12
 import io.nasiri.common.theme.bold16
+import io.nasiri.common.theme.rounded16
 
 @Composable
 fun ChatItem(modifier: Modifier = Modifier) {
@@ -55,7 +55,7 @@ fun ChatItem(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(.5.dp)
-                .clip(RoundedCornerShape(16.dp))
+                .clip(rounded16)
                 .background(Color.Gray)
         )
     }
