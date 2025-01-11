@@ -17,6 +17,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -57,13 +58,6 @@ fun ChatScreen(modifier: Modifier = Modifier) {
                 ItemSender(test = false)
                 ItemSender(test = false)
                 ItemSender()
-                DayTag()
-                ItemSender(test = false)
-                ItemSender(test = false)
-                ItemSender()
-                DayTag()
-                ItemSender(test = false)
-                ItemSender(test = false)
             }
             Row(
                 modifier = Modifier
@@ -77,7 +71,7 @@ fun ChatScreen(modifier: Modifier = Modifier) {
                         .weight(2f)
                         .height(60.dp)
                         .clip(RoundedCornerShape(16.dp))
-                        .background(Color.Black)
+                        .background(MaterialTheme.colorScheme.onPrimary)
                         .clickable { },
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -89,18 +83,18 @@ fun ChatScreen(modifier: Modifier = Modifier) {
                             .border(
                                 1.dp, Color.Red, CircleShape
                             )
-                            .background(Color.White)
+                            .background(MaterialTheme.colorScheme.primary)
                     )
                     Spacer(modifier = Modifier.width(4.dp))
                     Text(
                         text = "Matin Nasiri",
-                        color = Color.White,
+                        color = MaterialTheme.colorScheme.primary,
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Spacer(modifier = Modifier.width(4.dp))
                     Text(
-                        text = "Online", color = Color.White, fontSize = 8.sp
+                        text = "Online", color = MaterialTheme.colorScheme.primary, fontSize = 8.sp
                     )
                 }
                 Button(icon = R.drawable.ic_more) { }

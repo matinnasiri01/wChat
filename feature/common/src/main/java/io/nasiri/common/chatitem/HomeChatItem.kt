@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -38,7 +39,7 @@ fun ChatItem(modifier: Modifier = Modifier) {
                     modifier = Modifier
                         .size(60.dp)
                         .clip(CircleShape)
-                        .background(Color.Black)
+                        .background(MaterialTheme.colorScheme.onPrimary)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Column {

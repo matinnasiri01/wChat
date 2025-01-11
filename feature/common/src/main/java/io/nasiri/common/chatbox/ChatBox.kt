@@ -10,11 +10,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
@@ -28,7 +28,7 @@ fun ChatBox(modifier: Modifier = Modifier) {
             .fillMaxWidth()
             .padding(horizontal = 14.dp)
             .clip(RoundedCornerShape(32.dp))
-            .background(Color.Black)
+            .background(MaterialTheme.colorScheme.onPrimary)
             .padding(4.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -38,17 +38,17 @@ fun ChatBox(modifier: Modifier = Modifier) {
                 .padding(start = 12.dp, end = 10.dp),
             value = "reply to story...",
             onValueChange = { },
-            textStyle = TextStyle(color = Color.White, fontSize = 12.sp)
+            textStyle = TextStyle(color = MaterialTheme.colorScheme.primary, fontSize = 12.sp)
         )
         Box(
             modifier = Modifier
                 .size(56.dp)
                 .clip(RoundedCornerShape(32.dp))
-                .background(Color.White)
+                .background(MaterialTheme.colorScheme.primary)
                 .clickable { }, contentAlignment = Alignment.Center
         ) {
             Icon(
-                tint = Color.Black,
+                tint = MaterialTheme.colorScheme.onPrimary,
                 painter = painterResource(id = R.drawable.ic_send),
                 contentDescription = null
             )

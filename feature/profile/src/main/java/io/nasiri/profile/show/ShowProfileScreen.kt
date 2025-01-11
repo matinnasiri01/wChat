@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -33,7 +34,7 @@ import io.nasiri.common.R
 
 @Composable
 fun ShowProfileScreen(modifier: Modifier = Modifier) {
-    val owner = true
+    val owner = false
     Scaffold {
         Box(
             modifier = modifier
@@ -92,14 +93,14 @@ fun BoxScope.ProfileButton(modifier: Modifier = Modifier, owner: Boolean = false
             .padding(horizontal = 40.dp)
             .padding(bottom = 40.dp)
             .clip(RoundedCornerShape(16.dp))
-            .background(Color.Black)
+            .background(MaterialTheme.colorScheme.onPrimary)
             .clickable { },
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
         if (owner) {
             Icon(
-                tint = Color.White,
+                tint = MaterialTheme.colorScheme.primary,
                 painter = painterResource(id = R.drawable.ic_logout),
                 contentDescription = null
             )
@@ -107,7 +108,7 @@ fun BoxScope.ProfileButton(modifier: Modifier = Modifier, owner: Boolean = false
         }
 
         Text(
-            color = Color.White,
+            color = MaterialTheme.colorScheme.primary,
             text = if (owner) "Logout" else "Continue chatting",
             fontWeight = FontWeight.Bold,
             fontSize = 22.sp
